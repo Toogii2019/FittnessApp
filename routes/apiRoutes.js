@@ -52,17 +52,6 @@ module.exports = function (app) {
     })
   });
 
-  app.delete("/api/workouts", (req, res) => {
-    workouts.findByIdAndDelete(
-      req.body.id)
-    .then(() => {
-      res.json(true);
-    })
-    .catch(err => {
-      res.json(err);
-    });
-  });
-
   app.get("/api/workouts/range", (req, res) => {
     workouts.find({}).limit(7)
       .then(workout => {
