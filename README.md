@@ -1,2 +1,0 @@
-# FittnessApp
-Fittness tracking application
